@@ -1,111 +1,111 @@
 <style>
   :root {
-    --primary: #2c3e50;
-    --accent: #3498db;
-    --bg: #f4f7f6;
-    --text: #333;
-    --white: #ffffff;
+    --sam-blue: #034EA2; 
+    --tech-cyan: #00A9E0;
+    --bg-light: #f8f9fa;
+    --dark-text: #1c1c1c;
+    --card-bg: #ffffff;
   }
 
   body { 
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
-    line-height: 1.6; 
-    background-color: var(--bg);
-    color: var(--text);
-    max-width: 900px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.7; 
+    background-color: var(--bg-light);
+    color: var(--dark-text);
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
   }
 
-  /* Título con gradiente */
+  /* Encabezado principal */
+  .header-container {
+    text-align: center;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+  }
+
   h1 { 
-    font-size: 2.5rem;
-    background: linear-gradient(120deg, #2c3e50, #3498db);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-bottom: 4px solid var(--accent);
-    padding-bottom: 15px;
+    font-size: 2.8rem;
+    color: var(--sam-blue);
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+
+  .institution {
+    font-size: 1.2rem;
+    color: var(--tech-cyan);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* Sección de colaboradores */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
     text-align: center;
   }
 
-  h2 { 
-    color: var(--primary);
-    border-left: 5px solid var(--accent);
-    padding-left: 15px;
-    margin-top: 50px;
-    background: rgba(52, 152, 219, 0.05);
-  }
-
-  /* Estilo de tarjetas para imágenes y tablas */
-  img, table {
-    background: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    margin: 20px 0;
-  }
-
-  img:hover {
-    transform: translateY(-5px);
-  }
-
-  /* Tabla */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-  }
-
-  th {
-    background-color: var(--accent);
+  .member {
+    background: var(--sam-blue);
     color: white;
-    padding: 12px;
-  }
-
-  td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-  }
-
-  tr:hover { background-color: #f1f1f1; }
-
-  /* Bloques resaltados para los objetivos */
-  blockquote {
-    background: #eef6fc;
-    border-left: 8px solid var(--accent);
-    margin: 1.5em 10px;
-    padding: 1em 15px;
-    border-radius: 0 15px 15px 0;
-    font-style: italic;
-  }
-
-  /* Botones de navegación (índice) */
-  ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  ul li a {
-    text-decoration: none;
-    background: var(--white);
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
     font-size: 0.9rem;
-    transition: all 0.3s;
+    font-weight: 500;
   }
 
-  ul li a:hover {
-    background: var(--accent);
-    color: white;
+  h2 { 
+    color: var(--sam-blue);
+    border-bottom: 3px solid var(--tech-cyan);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-top: 50px;
   }
+
+  /* Mejoras en tablas e imágenes */
+  img {
+    border-radius: 15px;
+    border: 1px solid #e1e4e8;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+  }
+
+  table {
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  }
+
+  th { background-color: var(--sam-blue) !important; color: white !important; }
 </style>
+
+<div class="header-container">
+  <p class="institution">Samsung Innovation Campus</p>
+  <h1>Signal Lab</h1>
+  <p>Predicción de Riesgo de Diabetes Tipo 2 mediante Inteligencia Artificial</p>
+  
+  <div class="team-grid">
+    <div class="member">Medina Mixtega Ángel Miguél</div>
+    <div class="member">Plascencia Arevalo Alberto</div>
+    <div class="member">Méndez Ortega Paula</div>
+    <div class="member">Mota Barraza Moisés</div>
+    <div class="member">Mendez Damián Brandon Efren</div>
+  </div>
+
+  <br>
+  <a href="https://colab.research.google.com/drive/1nX9DHH1Ts1Y1LvaSJwoYT7Lzrs1dS6dc?usp=sharing">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="box-shadow:none; margin:0; display:inline;">
+  </a>
+</div>
 
 # Signal Lab: Predicción de Riesgo de Diabetes Tipo 2
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nX9DHH1Ts1Y1LvaSJwoYT7Lzrs1dS6dc?usp=sharing)
