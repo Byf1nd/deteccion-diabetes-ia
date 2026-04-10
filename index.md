@@ -1,109 +1,114 @@
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
   :root {
-    --sam-blue: #034EA2; 
-    --tech-cyan: #00A9E0;
-    --bg-light: #f8f9fa;
-    --dark-text: #1c1c1c;
-    --card-bg: #ffffff;
+    --sam-blue: #034EA2;
+    --dark: #000000;
+    --gray: #666666;
+    --light-bg: #ffffff; 
   }
 
   body { 
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-    line-height: 1.7; 
-    background-color: var(--bg-light);
-    color: var(--dark-text);
-    max-width: 1000px;
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--light-bg);
+    color: var(--dark);
+    max-width: 850px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
 
-  /* Encabezado principal */
-  .header-container {
-    text-align: center;
-    padding: 40px;
-    background: var(--white);
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    margin-bottom: 40px;
+  .header-area {
+    text-align: left;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+  }
+
+  .campus-tag {
+    color: var(--sam-blue);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
   }
 
   h1 { 
-    font-size: 2.8rem;
-    color: var(--sam-blue);
-    margin-bottom: 10px;
+    font-size: 3.5rem;
     font-weight: 800;
+    line-height: 1;
+    margin: 10px 0;
+    letter-spacing: -2px;
   }
 
-  .institution {
-    font-size: 1.2rem;
-    color: var(--tech-cyan);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--gray);
+    margin-bottom: 30px;
   }
 
-  /* Sección de colaboradores */
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Lista de integrantes */
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
-    margin: 25px 0;
-    text-align: center;
+    margin-bottom: 30px;
   }
 
-  .member {
-    background: var(--sam-blue);
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
+  .team-item {
     font-size: 0.9rem;
-    font-weight: 500;
+    background: #f1f1f1;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-weight: 600;
   }
 
+  /* Botón de colab */
+  .colab-link img {
+    box-shadow: none !important;
+    margin: 0 !important;
+    transition: opacity 0.2s;
+  }
+  .colab-link img:hover { opacity: 0.8; }
+
+  /* Ajustes de contenido */
   h2 { 
-    color: var(--sam-blue);
-    border-bottom: 3px solid var(--tech-cyan);
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-top: 50px;
-  }
-
-  /* Mejoras en tablas e imágenes */
-  img {
-    border-radius: 15px;
-    border: 1px solid #e1e4e8;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 30px auto;
+    font-size: 1.8rem;
+    margin-top: 60px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
   }
 
   table {
-    border-radius: 10px;
-    overflow: hidden;
-    border: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #eee;
   }
+  
+  th { background-color: #fafafa !important; color: var(--dark) !important; border-bottom: 2px solid var(--sam-blue) !important; }
 
-  th { background-color: var(--sam-blue) !important; color: white !important; }
+  /* Quita sombras de las imágenes */
+  img {
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
 </style>
 
-<div class="header-container">
-  <p class="institution">Samsung Innovation Campus</p>
-  <h1>Signal Lab</h1>
-  <p>Predicción de Riesgo de Diabetes Tipo 2 mediante Inteligencia Artificial</p>
+<div class="header-area">
+  <div class="campus-tag">Samsung Innovation Campus</div>
+  <h1>Signal Lab.</h1>
+  <p class="subtitle">Predicción de Riesgo de Diabetes Tipo 2 mediante Inteligencia Artificial aplicada a la ENSANUT 2024.</p>
   
-  <div class="team-grid">
-    <div class="member">Medina Mixtega Ángel Miguél</div>
-    <div class="member">Plascencia Arevalo Alberto</div>
-    <div class="member">Méndez Ortega Paula</div>
-    <div class="member">Mota Barraza Moisés</div>
-    <div class="member">Mendez Damián Brandon Efren</div>
+  <div class="team-list">
+    <span class="team-item">Medina Mixtega Ángel Miguél</span>
+    <span class="team-item">Plascencia Arevalo Alberto</span>
+    <span class="team-item">Méndez Ortega Paula</span>
+    <span class="team-item">Mota Barraza Moisés</span>
+    <span class="team-item">Méndez Damián Brandon Efren</span>
   </div>
 
-  <br>
-  <a href="https://colab.research.google.com/drive/1nX9DHH1Ts1Y1LvaSJwoYT7Lzrs1dS6dc?usp=sharing">
-    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="box-shadow:none; margin:0; display:inline;">
+  <a href="https://colab.research.google.com/drive/1nX9DHH1Ts1Y1LvaSJwoYT7Lzrs1dS6dc?usp=sharing" class="colab-link">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
   </a>
 </div>
 
