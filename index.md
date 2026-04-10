@@ -1,10 +1,110 @@
 <style>
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-  h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-  h2 { color: #2980b9; margin-top: 40px; }
-  .markdown-body table { width: 100%; display: table; }
-  .highlight { background-color: #f8f9fa; padding: 15px; border-left: 5px solid #3498db; }
-  blockquote { font-style: italic; color: #555; border-left: 4px solid #ccc; padding-left: 15px; }
+  :root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --bg: #f4f7f6;
+    --text: #333;
+    --white: #ffffff;
+  }
+
+  body { 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+    line-height: 1.6; 
+    background-color: var(--bg);
+    color: var(--text);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Título con gradiente */
+  h1 { 
+    font-size: 2.5rem;
+    background: linear-gradient(120deg, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid var(--accent);
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  h2 { 
+    color: var(--primary);
+    border-left: 5px solid var(--accent);
+    padding-left: 15px;
+    margin-top: 50px;
+    background: rgba(52, 152, 219, 0.05);
+  }
+
+  /* Estilo de tarjetas para imágenes y tablas */
+  img, table {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin: 20px 0;
+  }
+
+  img:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+  }
+
+  th {
+    background-color: var(--accent);
+    color: white;
+    padding: 12px;
+  }
+
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  tr:hover { background-color: #f1f1f1; }
+
+  /* Bloques resaltados para los objetivos */
+  blockquote {
+    background: #eef6fc;
+    border-left: 8px solid var(--accent);
+    margin: 1.5em 10px;
+    padding: 1em 15px;
+    border-radius: 0 15px 15px 0;
+    font-style: italic;
+  }
+
+  /* Botones de navegación (índice) */
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  ul li a {
+    text-decoration: none;
+    background: var(--white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+  }
+
+  ul li a:hover {
+    background: var(--accent);
+    color: white;
+  }
 </style>
 
 # Signal Lab: Predicción de Riesgo de Diabetes Tipo 2
