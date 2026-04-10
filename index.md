@@ -1,4 +1,7 @@
+
 # Signal Lab: Predicción de Riesgo de Diabetes Tipo 2
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nX9DHH1Ts1Y1LvaSJwoYT7Lzrs1dS6dc?usp=sharing)
+
 ### Inteligencia Artificial Aplicada a la Salud Pública en México (ENSANUT 2024)
 
 ---
