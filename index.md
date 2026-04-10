@@ -1,8 +1,22 @@
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2980b9; margin-top: 40px; }
+  .markdown-body table { width: 100%; display: table; }
+  .highlight { background-color: #f8f9fa; padding: 15px; border-left: 5px solid #3498db; }
+  blockquote { font-style: italic; color: #555; border-left: 4px solid #ccc; padding-left: 15px; }
+</style>
 
 # Signal Lab: Predicción de Riesgo de Diabetes Tipo 2
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nX9DHH1Ts1Y1LvaSJwoYT7Lzrs1dS6dc?usp=sharing)
 
 ### Inteligencia Artificial Aplicada a la Salud Pública en México (ENSANUT 2024)
+## Tabla de Contenidos
+- [Objetivo](#-emergencia-sanitaria-silenciosa)
+- [Metodología](#️-metodología-y-arquitectura-de-datos)
+- [Resultados](#-análisis-exploratorio-y-validación-biológica)
+- [Modelado](#-resultados-torneo-de-algoritmos)
+- [Perfiles de Riesgo](#-interpretabilidad-y-perfilamiento-k-means)
 
 ---
 
